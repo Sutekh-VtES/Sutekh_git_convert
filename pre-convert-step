@@ -1,0 +1,4 @@
+#!/bin/bash
+# Pre convert renaming so branches and tags are correct
+mv sutekh.svn sutekh.svn.orig
+cat sutekh.svn.orig | repocutter pathrename '^releases/stable-tags/' 'tags/' | repocutter pathrename '^releases/unstable-tags/' 'tags/' | repocutter pathrename '^releases/stable-branches/' 'branches/' | repocutter pathrename '^releases/unstable-branches/' 'branches/' > sutekh.svn
