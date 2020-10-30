@@ -117,7 +117,7 @@ filter-branches: sutekh.svn
 	./pre-convert-step
 
 fix-tags:
-	./post-convert-step
+	cd sutekh-git && ../post-convert-step
 
 #
 # The following productions are git-specific
